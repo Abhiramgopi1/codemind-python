@@ -1,21 +1,21 @@
-def prime(i):
-    if i==1:
-        return 0
-    for j in range(2,i//2):
-        if i%j==0:
-            return 0
-    return 1
+def is_prime(s):
+    if s==1:
+        return False
+    for i in range(2,s//2):
+        if s%i==0:
+            return False
+    return True
 
-x=int(input())
-r=0
+x = int(input())
+s=0
 a=x
 while x!=0:
-    d=x%10
-    r=r*10+d
-    x//=10
-if prime(r) and prime(a):
+    v = x%10
+    s = s*10+v
+    x = x//10
+if is_prime(s) and is_prime(a):
     print('circular prime')
-elif (prime(a)):
-        print('prime but not a circular prime')
+elif(is_prime(a)):
+    print('prime but not a circular prime')
 else:
     print('not prime')
