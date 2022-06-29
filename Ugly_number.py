@@ -10,4 +10,3 @@ if(is_ugly(n)):
     print('Ugly Number')
 else:
     print('Not Ugly Number')
-    
