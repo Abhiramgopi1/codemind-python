@@ -1,16 +1,16 @@
-def prime(i):
-    if i==1:
+def prime(n):
+    if n==1:
         return 0
-    for j in range(2,int(i**0.5)+1):
-        if i%j==0:
+    for i in range(2,int(n**0.5)+1):
+        if n%i==0:
             return 0
     return 1
-n=int(input())
+x=int(input())
 l=list(map(int,input().split()))
 c=0
-k=int(input())
+a=int(input())
 for i in l:
-    if i>=k:
+    if i>=a:
         if prime(i):
             c+=1
 print(c)
